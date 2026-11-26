@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WebデザインのデザインカンプとFigmaプロトタイプを掲載しています。">
+    <title>Web Design | Portfolio</title>
+
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/nicolas-cusan/destyle.css/master/destyle.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <a href="index.html" class="site-title">PORTFOLIO</a>
+    </header>
+
+    <main>
+
+        <h1>Web Design</h1>
+        <p class="subtitle">Design Comp / PC & Smartphone</p>
+
+        <!-- =========================
+             catcafe
+        ========================== -->
+
+        <section class="work-section" id="catcafe">
+
+            <h2>catcafe</h2>
+
+            <!-- PC・スマホ切り替え -->
+            <nav class="version-switch">
+                <button type="button" class="active" onclick="showCatcafeVersion('PC', this)">
+                    PC版
+                </button>
+
+                <button type="button" onclick="showCatcafeVersion('SP', this)">
+                    スマホ版
+                </button>
+            </nav>
+
+            <!-- デザインカンプ -->
+            <div id="design-gallery" class="design-gallery"></div>
+
+            <!-- プロトタイプ -->
+            <div class="prototype">
+
+                <h2>Prototype</h2>
+
+                <div class="prototype-container">
+                    <iframe
+                        id="catcafe-prototype"
+                        title="catcafe Figma prototype"
+                        src="https://embed.figma.com/proto/RRQgfBSWFgTFDN5etksieR/lesson08-practice-finish?node-id=6001-641&starting-point-node-id=6001%3A641&embed-host=portfolio"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             Corporate Site
+        ========================== -->
+
+        <section class="work-section" id="corporateSite">
+
+            <h2>Corporate Site</h2>
+
+            <!-- PCデザインカンプ -->
+            <div id="corporate-gallery" class="design-gallery"></div>
+
+            <!-- PCプロトタイプ -->
+            <div class="prototype">
+
+                <h2>Prototype</h2>
+
+                <div class="prototype-container">
+                    <iframe
+                        title="Corporate Site Figma prototype"
+                        src="https://embed.figma.com/proto/WkqCrmcPwHLpQmYI194vho/work03-finish?node-id=2012-6&page-id=0%3A1&embed-host=portfolio"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             Login Image
+        ========================== -->
+
+        <section class="work-section" id="loginImage">
+
+            <h2>Login Image</h2>
+
+            <!-- スマホデザインカンプ -->
+            <div id="login-gallery" class="design-gallery"></div>
+
+            <!-- スマホプロトタイプ -->
+            <div class="prototype">
+
+                <h2>Prototype</h2>
+
+                <div class="prototype-container">
+                    <iframe
+                        title="Login Image Figma prototype"
+                        src="https://embed.figma.com/proto/hSF3KIHX9LGt78Ps58nJE6/work04-finish?node-id=2404-22&p=f&viewport=158%2C331%2C0.08&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2406%3A82&page-id=0%3A1&embed-host=portfolio"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- 画像拡大モーダル -->
+    <div id="image-modal" class="image-modal">
+        <button type="button" class="image-modal-close" aria-label="画像を閉じる">
+            &times;
+        </button>
+        <img id="modal-image" src="" alt="拡大画像">
+    </div>
+
+    <!-- ページ上部へ戻るボタン -->
+    <button type="button" id="back-to-top" aria-label="ページ上部へ戻る">
+        ↑
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
