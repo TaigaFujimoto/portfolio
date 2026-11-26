@@ -1,6 +1,6 @@
 
 /* ========================================
-   1. 全体設定
+   1. 全体設定・共通スタイル
 ======================================== */
 
 * {
@@ -101,7 +101,65 @@ h1 {
 
 
 /* ========================================
-   4. ポートフォリオ作品一覧
+   4. ABOUT ME：自己紹介
+======================================== */
+
+.intro-section {
+    width: 100%;
+    padding: 80px 8%;
+    margin: 0 auto;
+}
+
+.intro-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.intro-label {
+    font-family: "Lexend", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #888;
+    margin-bottom: 18px;
+}
+
+.intro-name {
+    font-family: "Lexend", sans-serif;
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.intro-description {
+    font-size: 14px;
+    line-height: 2.1;
+    letter-spacing: 0.04em;
+    margin-bottom: 25px;
+}
+
+.intro-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.intro-skills span {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-family: "Lexend", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: #555;
+}
+
+
+/* ========================================
+   5. ポートフォリオ作品一覧
 ======================================== */
 
 .gallery {
@@ -112,9 +170,9 @@ h1 {
 
 .item {
     position: relative;
+    aspect-ratio: 1 / 1;
     background: #eee;
     cursor: pointer;
-    aspect-ratio: 1 / 1;
     overflow: hidden;
 }
 
@@ -131,7 +189,7 @@ h1 {
 }
 
 
-/* catcafe PC・SP分割 */
+/* PC・スマートフォン画像の左右分割 */
 
 .item-split {
     display: flex;
@@ -156,7 +214,7 @@ h1 {
 
 
 /* ========================================
-   5. 作品詳細モーダル
+   6. 作品詳細モーダル
 ======================================== */
 
 .modal {
@@ -186,7 +244,7 @@ h1 {
 }
 
 
-/* 閉じるボタン：画面右上に固定 */
+/* 閉じるボタン */
 
 .close {
     position: fixed;
@@ -214,7 +272,7 @@ h1 {
 }
 
 
-/* モーダルのメイン画像 */
+/* メイン画像 */
 
 .modal-content img {
     display: block;
@@ -241,7 +299,7 @@ h1 {
 }
 
 
-/* モーダルの作品情報 */
+/* 作品情報 */
 
 .modal-description {
     display: flex;
@@ -277,7 +335,7 @@ h1 {
 
 
 /* ========================================
-   6. Profileモーダル
+   7. Profileモーダル
 ======================================== */
 
 .profile-modal {
@@ -285,10 +343,10 @@ h1 {
     position: fixed;
     inset: 0;
     z-index: 1200;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    padding: 20px;
 }
 
 .profile-modal.active {
@@ -347,7 +405,7 @@ h1 {
 
 
 /* ========================================
-   7. Web Design・デザインカンプ
+   8. デザインカンプ・作品詳細ページ
 ======================================== */
 
 .work-section {
@@ -384,7 +442,7 @@ h1 {
 
 
 /* ========================================
-   8. PC・スマホ切り替え
+   9. PC・スマートフォン切り替え
 ======================================== */
 
 .version-switch {
@@ -412,7 +470,7 @@ h1 {
 
 
 /* ========================================
-   9. Figma Prototype
+   10. Figma Prototype
 ======================================== */
 
 .prototype {
@@ -436,7 +494,7 @@ h1 {
 
 
 /* ========================================
-   10. デザイン画像拡大モーダル
+   11. デザイン画像拡大モーダル
 ======================================== */
 
 .image-modal {
@@ -487,7 +545,7 @@ h1 {
 
 
 /* ========================================
-   11. ページ上部へ戻るボタン
+   12. ページ上部へ戻るボタン
 ======================================== */
 
 #back-to-top {
@@ -531,10 +589,12 @@ h1 {
 
 
 /* ========================================
-   12. スマートフォン対応
+   13. タブレット・スマートフォン対応
 ======================================== */
 
 @media screen and (max-width: 768px) {
+
+    /* メインコンテンツ */
 
     main {
         padding: 45px 18px;
@@ -544,10 +604,41 @@ h1 {
         font-size: 23px;
     }
 
+
+    /* 自己紹介 */
+
+    .intro-section {
+        padding: 55px 6%;
+    }
+
+    .intro-name {
+        font-size: 34px;
+    }
+
+    .intro-description {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .intro-skills {
+        gap: 8px;
+    }
+
+    .intro-skills span {
+        padding: 7px 12px;
+        font-size: 11px;
+    }
+
+
+    /* 作品一覧 */
+
     .gallery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
     }
+
+
+    /* 作品詳細モーダル */
 
     .modal-content {
         width: 94%;
@@ -563,25 +654,33 @@ h1 {
         gap: 1rem;
     }
 
-    .prototype-container {
-        height: 650px;
-    }
+
+    /* デザインカンプ */
 
     .design-gallery {
         gap: 20px;
+    }
+
+    .prototype-container {
+        height: 650px;
     }
 }
 
 
 /* ========================================
-   13. 小型スマートフォン対応
+   14. 小型スマートフォン対応
 ======================================== */
 
 @media screen and (max-width: 600px) {
 
+    /* ヘッダー */
+
     header {
         padding: 20px 5%;
     }
+
+
+    /* メインコンテンツ */
 
     main {
         padding: 40px 15px;
@@ -594,6 +693,9 @@ h1 {
     .section-title {
         font-size: 21px;
     }
+
+
+    /* デザインカンプ */
 
     .version-switch button {
         flex: 1;
@@ -610,6 +712,9 @@ h1 {
         height: 600px;
     }
 
+
+    /* 作品詳細モーダル */
+
     .close {
         top: 15px;
         right: 15px;
@@ -617,6 +722,9 @@ h1 {
         height: 42px;
         font-size: 1.7rem;
     }
+
+
+    /* 画像拡大モーダル */
 
     .image-modal {
         padding: 15px;
@@ -635,9 +743,15 @@ h1 {
         font-size: 1.7rem;
     }
 
+
+    /* Profileモーダル */
+
     .profile-content {
         padding: 45px 20px;
     }
+
+
+    /* ページ上部へ戻るボタン */
 
     #back-to-top {
         right: 18px;
@@ -650,7 +764,7 @@ h1 {
 
 
 /* ========================================
-   14. 動きを控える設定
+   15. アニメーションを控える設定
 ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
