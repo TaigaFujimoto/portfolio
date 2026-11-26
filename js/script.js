@@ -38,7 +38,7 @@ const works = {
         tools: "Figma",
         date: "",
         period: "",
-        link: "design%26prototype.html#catcafe",
+        link: "design-prototype.html#catcafe",
         memo: "デザインカンプとプロトタイプを掲載しています。",
         concept: "",
         design: "",
