@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webサイトやバナーなどの制作実績をまとめたポートフォリオです。">
+    <title>PORTFOLIO</title>
+
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/nicolas-cusan/destyle.css/master/destyle.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="site-title">PORTFOLIO</div>
+        <div class="profile-link">Profile</div>
+    </header>
+
+    <main>
+
+        <!-- WEB・LP -->
+        <section class="portfolio-section">
+            <h2 class="section-title">WEB・LP</h2>
+
+            <div class="gallery">
+
+                <!-- AKISETO -->
+                <div class="item" onclick="openModal('akiseto')">
+                    <img src="img/AKISETO_min.png" alt="AKISETO site" loading="lazy">
+                </div>
+
+                <!-- 安芸・瀬戸 -->
+                <div class="item" onclick="openModal('akiSeto')">
+                    <img src="img/AKI_SETO_min.png" alt="安芸・瀬戸 site" loading="lazy">
+                </div>
+
+                <!-- catcafe -->
+                <div class="item item-split" onclick="openModal('catcafe')">
+                    <div class="split-half">
+                        <img src="img/catcafe_pc_min.png" alt="catcafe PC" loading="lazy">
+                    </div>
+                    <div class="split-half">
+                        <img src="img/catcafe_sp_min.png" alt="catcafe SP" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Corporate Site -->
+                <div class="item" onclick="openModal('corporateSite')">
+                    <img src="img/corporateSite_min.png" alt="Corporate Site" loading="lazy">
+                </div>
+
+                <!-- Login Image -->
+                <div class="item" onclick="openModal('loginImage')">
+                    <img src="img/login_min.png" alt="Login Image" loading="lazy">
+                </div>
+
+                <!-- むさし陶器 -->
+                <div class="item" onclick="openModal('musashiTouki')">
+                    <img src="img/musashi_touki_min.png" alt="むさし陶器" loading="lazy">
+                </div>
+
+                <!-- 作品準備中 -->
+                <div class="item">
+                    <img src="img/placeholder.png" alt="作品準備中" loading="lazy">
+                </div>
+
+                <!-- 作品準備中：左右2分割 -->
+                <div class="item item-split">
+                    <div class="split-half">
+                        <img src="img/placeholder.png" alt="作品準備中" loading="lazy">
+                    </div>
+                    <div class="split-half">
+                        <img src="img/placeholder.png" alt="作品準備中" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BANNER -->
+        <section class="portfolio-section">
+            <h2 class="section-title">BANNER</h2>
+
+            <div class="gallery">
+
+                <!-- Photo Contest Banner -->
+                <div class="item" onclick="openModal('figmaBanner')">
+                    <img src="img/photocontest_banner.png" alt="Photo Contest Banner" loading="lazy">
+                </div>
+
+                <!-- Banner 1 -->
+                <div class="item" onclick="openModal('banner1')">
+                    <img src="img/banner1.png" alt="Banner 1" loading="lazy">
+                </div>
+
+                <!-- Banner 2 -->
+                <div class="item" onclick="openModal('banner2')">
+                    <img src="img/banner2.png" alt="Banner 2" loading="lazy">
+                </div>
+
+                <!-- Banner 3 -->
+                <div class="item" onclick="openModal('banner3')">
+                    <img src="img/banner3.png" alt="Banner 3" loading="lazy">
+                </div>
+
+                <!-- 作品準備中 -->
+                <div class="item">
+                    <img src="img/placeholder.png" alt="作品準備中" loading="lazy">
+                </div>
+
+                <!-- 作品準備中 -->
+                <div class="item">
+                    <img src="img/placeholder.png" alt="作品準備中" loading="lazy">
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 作品詳細モーダル -->
+    <div id="modal" class="modal">
+
+        <!-- 閉じるボタン -->
+        <button type="button" class="close" onclick="closeModal()" aria-label="閉じる">
+            &times;
+        </button>
+
+        <div class="modal-content">
+
+            <!-- メインビジュアル -->
+            <div class="modal-main-visual">
+                <img id="modal-image" src="" alt="作品プレビュー">
+                <img id="modal-image-sp" src="" alt="SP版プレビュー">
+            </div>
+
+            <!-- 作品情報 -->
+            <div class="modal-description">
+
+                <div class="left">
+                    <p><strong>作品名</strong> <span id="modal-title"></span></p>
+                    <p><strong>使用ツール</strong> <span id="modal-tools"></span></p>
+                    <p><strong>制作時期</strong> <span id="modal-date"></span></p>
+                    <p><strong>制作期間</strong> <span id="modal-period"></span></p>
+
+                    <p id="modal-link-row">
+                        <strong>リンク先URL</strong>
+                        <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer">
+                            Webサイトを見る
+                        </a>
+                    </p>
+
+                    <p><strong>MEMO</strong> <span id="modal-memo"></span></p>
+                </div>
+
+                <div class="right">
+
+                    <p>
+                        <strong>コンセプト</strong><br>
+                        <span id="modal-concept"></span>
+                    </p>
+
+                    <p>
+                        <strong>デザイン意図</strong><br>
+                        <span id="modal-design"></span>
+                    </p>
+
+                    <p>
+                        <strong>工夫した点</strong><br>
+                        <span id="modal-point"></span>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ページ上部へ戻るボタン -->
+    <button type="button" id="back-to-top" aria-label="ページ上部へ戻る">
+        ↑
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

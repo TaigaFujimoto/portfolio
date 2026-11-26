@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKISETOのトップページ</title>
+
+  <!-- ★ ファビコンの設定 ★ -->
+  <link rel="icon" href="img/common/AKISETO logo favicon.png" type="image/png">
+  <!-- スマホのホーム画面に追加した時のアイコン設定（任意） -->
+  <link rel="apple-touch-icon" href="img/common/AKISETO logo favicon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー（全ページ共通） -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </a>
+      </h1>
+
+      <!-- ハンバーガーボタン -->
+      <button class="hamburger" id="js-hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- ナビゲーションメニュー -->
+      <nav class="nav" id="js-nav">
+        <!-- ドロワーメニュー用のロゴ -->
+        <div class="nav-logo">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </div>
+
+        <ul>
+          <li><a href="index.html"><img src="img/common/icon_top.png" alt=""><span>トップページ</span></a></li>
+          <li><a href="menu.html"><img src="img/common/icon_menu.png" alt=""><span>メニュー</span></a></li>
+          <li><a href="stores.html"><img src="img/common/icon_map.png" alt=""><span>店舗情報</span></a></li>
+          <li><a href="news.html"><img src="img/common/icon_news.png" alt=""><span>お知らせ</span></a></li>
+          <li><a href="contact.html"><img src="img/common/icon_contact.png" alt=""><span>お問い合わせ</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインビジュアル -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="img//index/MainVisual1.png" alt="瀬戸内レモン" class="hero-img active">
+      <img src="img/index/MainVisual2.png" alt="店舗イメージ" class="hero-img">
+      <img src="img/index/MainVisual3.png" alt="AKISETOの料理" class="hero-img">
+      <img src="img/index/MainVisual4.png" alt="パブリックビューイング" class="hero-img">
+    </div>
+    <div class="hero-text">
+      <!-- 1枚目の画像用 -->
+      <div class="hero-text-item active">
+        <h1>広島のレモンを使った自慢の飲み物でおもてなし<br>
+          広島の気候が育てた広島レモン<br>
+          すっきり、さわやかでどんな飲み物でも<br>
+          皆様にも楽しんでいただけます</h1>
+      </div>
+
+      <!-- 2枚目の画像用（例：店舗イメージ） -->
+      <div class="hero-text-item">
+        <h1>瀬戸田の地ビールを堪能<br>
+            広島レモンビール醸造所と提携<br>
+            レモンを使ったビールの新しい飲み方<br></h1>
+      </div>
+
+      <!-- 3枚目の画像用（例：料理） -->
+      <div class="hero-text-item">
+        <h1>こだわりの素材を使った自慢の一品<br>
+          楽しみ方は千差万別<br>
+         お酒が飲めない方、美味しいご飯を食べたい方<br>
+         当店自慢のメニューを心ゆくまで<br>
+          ご堪能ください</h1>
+      </div>
+
+      <!-- 4枚目の画像用（例：パブリックビューイング） -->
+      <div class="hero-text-item">
+        <h1>みんなで盛り上がる最高の瞬間<br>
+          広島の誇りを皆様と<br>
+          広島のスポーツと一緒に乾杯<br>
+          アツく広島を盛り上げましょう<br></h1>
+         <p>※不定期開催、詳細はお知らせに</p>
+      </div>
+    </div>
+  
+    <!-- コントロールエリア（矢印ボタンとドット） -->
+    <div class="slider-controls">
+      <button type="button" class="slider-btn prev-btn" id="js-prev" aria-label="前へ">
+        <img src="img/common/btn_prev.png" alt="前へ">
+      </button>
+
+      <!-- 4枚分のドットインジケーター -->
+      <ul class="slider-dots" id="js-dots">
+        <li class="dot active"></li>
+        <li class="dot"></li>
+        <li class="dot"></li>
+        <li class="dot"></li>
+      </ul>
+
+    <button type="button" class="slider-btn next-btn" id="js-next" aria-label="次へ">
+      <img src="img/common/btn_next.png" alt="次へ">
+    </button>
+    </div>
+  </section>
+
+  <main>
+    <!-- イントロダクション -->
+    <section class="intro section-container">
+      <div class="intro-img">
+        <img src="img/index/AKISETO main1.png" alt="賑やかに乾杯する様子">
+      </div>
+      <div class="intro-text">
+        <h2>「広島」をたくさんの方に<br>広島レモンをはじめもっとたくさんの方に広島を感じてもらいたい<br>
+             県外へのお客様には広島のすばらしさを<br>
+             広島のお客様にはいつも通りの日常を<br>
+             私たちはそんなお客様に興味を持ってお越し頂きたくオープンいたしました。</h2>
+      </div>
+    </section>
+
+<section class="news section-container">
+      <div class="section-title">
+        <h2>NEWS</h2>
+        <span>ニュース</span>
+      </div>
+
+      <!-- ニューススライダーエリア -->
+      <div class="news-slider-container">
+        <div class="news-slider">
+          <!-- 1枚目 -->
+          <div class="news-slide active">
+      <img src="img/news/カープ パブリックビューイング.png" alt="広島東洋カープ戦 パブリックビューイング">
+      <div class="news-slide-text">
+        <span class="news-date">2026.8.30</span>
+        <h3>広島東洋カープ戦 パブリックビューイング開催</h3>
+      </div>
+    </div>
+
+          <!-- 2枚目 -->
+          <div class="news-slide">
+      <img src="img/news/サッカーW杯 パブリックビューイング.png" alt="サッカーW杯 パブリックビューイング">
+      <div class="news-slide-text">
+        <span class="news-date">2026.6.10</span>
+        <h3>サッカーW杯 パブリックビューイング開催</h3>
+      </div>
+    </div>
+
+          <!-- 3枚目 -->
+         <div class="news-slide">
+      <img src="img/menu/AKISETOBlood.png" alt="新レギュラーメニューに関するお知らせ">
+      <div class="news-slide-text">
+        <span class="news-date">2026.6.01</span>
+        <h3>新レギュラーメニューのご案内</h3>
+      </div>
+    </div>
+  </div>
+
+        <!-- スライダーコントロール（矢印ボタンとドット） -->
+        <div class="news-slider-controls">
+    <button type="button" class="news-slider-btn prev-btn" id="js-news-prev" aria-label="前のニュースへ">
+      <img src="img/common/btn_prev.png" alt="前へ">
+    </button>
+
+    <!-- ドットインジケーター -->
+    <ul class="news-slider-dots" id="js-news-dots">
+      <li class="dot active"></li>
+      <li class="dot"></li>
+      <li class="dot"></li>
+    </ul>
+
+    <button type="button" class="news-slider-btn next-btn" id="js-news-next" aria-label="次のニュースへ">
+      <img src="img/common/btn_next.png" alt="次へ">
+    </button>
+  </div>
+</div>
+
+<div class="btn-container">
+  <a href="news.html" class="btn">ニュースの詳細を見る</a>
+</div>
+</section>
+
+   <!-- ABOUT -->
+<section class="about section-container">
+  <div class="section-title">
+    <h2>ABOUT</h2>
+    <span>広島レモンとは</span>
+  </div>
+  <div class="about-content">
+    <div class="about-img">
+      <img src="img/index/lemon2.png" alt="広島レモンの写真">
+    </div>
+    <div class="about-text-box">
+      <p>広島レモンは海外産と異なり、防カビ剤やワックスを使用せず栽培されるため、皮まで安心して丸ごと食べられます<br><br>
+      <strong>旬による色の違い</strong><br>
+      グリーンレモン（10月〜12月頃）：爽快な香りとしっかりとした酸味が特徴<br>
+      イエローレモン（1月〜5月頃）：熟すことで果汁が増え、まろやかな酸味と旨味が引き立ちます</p>
+    </div>
+  </div>
+</section>
+
+    <!-- MENU -->
+    <section class="menu section-container">
+      <div class="section-title">
+        <h2>MENU</h2>
+        <span>メニュー</span>
+      </div>
+      <div class="menu-img">
+        <img src="img/menu/02_hiroshima_lemon_sour.png" alt="レモンサワー">
+      </div>
+      <div class="menu-text">
+        <p>自慢のレモンサワーや極上フードを！！<br>当店はレモンサワーや地ビールだけではありません！<br>おつまみ、お食事もたくさんあります！</p>
+        <p>お一人様も,お友達同士も大歓迎です！</p>
+      </div>
+      <div class="btn-container">
+        <a href="menu.html" class="btn">メニューを詳しく見る</a>
+      </div>
+    </section>
+
+   <!-- STORES -->
+<section class="stores section-container">
+  <div class="section-title">
+    <h2>STORES</h2>
+    <span>店舗情報</span>
+  </div>
+  <div class="stores-content">
+    <div class="stores-img">
+      <img src="img/stores/AKISETO 本通り店外観.png" alt="AKISETO 本通り店外観">
+    </div>
+    <div class="stores-notice">
+      <p>多くのお客様にご利用頂けるようなお店づくりを目指しています<br>
+      各店舗の営業時間等の詳細情報は詳しくはこちらをお願いいたします</p>
+    </div>
+  </div>
+  <div class="btn-container">
+    <a href="stores.html" class="btn">店舗情報を見る</a>
+  </div>
+</section>
+  </main>
+
+ <!-- フッター-->
+  <footer class="footer">
+    <div class="footer-bg">
+      <img src="img/common/footer.png" alt="店内イメージ">
+    </div>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="img/common/footer_logo.png" alt="AKISETO">
+      </a>
+    </div>
+  </footer>
+
+  <!-- ページトップへ戻るボタン -->
+  <button type="button" class="page-top-btn" id="js-pagetop" aria-label="ページ上部へ戻る">
+    <img src="img/common/btn_pagetop.png" alt="上へ">
+  </button>
+
+<!-- 共通JavaScriptの読み込み -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+</body>
+</html>

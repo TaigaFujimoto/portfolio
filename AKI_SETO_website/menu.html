@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メニュー（広島駅北店） | 安芸・瀬戸 AKISETO</title>
+
+<!-- ファビコン設定 -->
+<link rel="icon" href="img/common/アートボード 2.png" type="image/png">
+<link rel="apple-touch-icon" href="img/common/アートボード 2.png">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand-dark': '#121212',
+          'brand-gray': '#1c1c1c',
+          'brand-gold': '#c5a059',
+          'brand-light': '#f4f4f0',
+          'brand-muted': '#a0a09c',
+        },
+        fontFamily: {
+          serif: ['"Noto Serif JP"', 'serif'],
+          sans: ['"Noto Sans JP"', 'sans-serif'],
+          en: ['"Cinzel"', 'serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-brand-dark text-brand-light font-sans selection:bg-brand-gold selection:text-brand-dark">
+
+ <!-- ヘッダー -->
+  <header id="header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-gradient-to-b from-black/80 to-transparent py-4 px-6 md:px-12 flex justify-between items-center">
+
+<!-- ロゴエリア -->
+    <h1 class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="img/common/アートボード 1.png" alt="安芸・瀬戸 AKISETO" class="logo-text h-14 md:h-16 w-auto object-contain brightness-0 invert">
+      </a> <!-- ← この </a> を追加 -->
+    </h1>
+
+    <!-- ハンバーガーボタン（md:hidden を追加してPC表示時は非表示） -->
+    <button id="hamburger"
+      class="hamburger-btn relative z-50 w-8 h-8 flex flex-col justify-center items-center gap-1.5 focus:outline-none md:hidden"
+      aria-label="メニューを開く">
+      <span class="hamburger-line line-1 w-6 h-px bg-brand-light block"></span>
+      <span class="hamburger-line line-2 w-6 h-px bg-brand-light block"></span>
+      <span class="hamburger-line line-3 w-6 h-px bg-brand-light block"></span>
+    </button>
+
+
+    <!-- ナビゲーション -->
+    <nav id="nav-menu" class="nav-drawer fixed inset-0 bg-brand-dark/95 backdrop-blur-md z-40 flex flex-col justify-center items-center translate-x-full transition-transform duration-300 md:translate-x-0 md:static md:bg-transparent md:backdrop-blur-none md:flex-row md:justify-end md:inset-auto">
+      <ul class="text-center md:text-left space-y-8 md:space-y-0 md:flex md:space-x-8 font-serif text-lg md:text-sm tracking-widest items-center">
+        <li><a href="index.html" class="hover:text-brand-gold transition-colors duration-300">トップページ</a></li>
+        
+        <!-- お店と料理（メガメニュー） -->
+        <li class="relative group flex items-center">
+          <span id="store-menu-btn" class="flex items-center gap-1 cursor-pointer hover:text-brand-gold transition-colors duration-300">
+            お店と料理
+            <svg xmlns="http://www.w3.org/2000/svg" id="store-arrow" class="h-4 w-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div id="store-dropdown" class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible transition-all duration-300 z-50 w-[600px] max-w-[90vw]">
+            <div class="bg-brand-gray border border-brand-light/10 p-6 shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <a href="stores-hondori.html" class="block bg-brand-dark/60 border border-brand-light/10 p-4 hover:border-brand-gold/50 transition-all group/card">
+                <h4 class="font-serif text-base tracking-widest text-brand-light mb-1 group-hover/card:text-brand-gold transition-colors">安芸・瀬戸 本通り店 →</h4>
+                <p class="text-xs font-sans text-brand-muted mb-3">広島の中心街、大人の隠れ家。</p>
+                <div class="text-[11px] font-sans text-brand-muted/70 flex justify-between">
+                  <span>17:00〜23:00</span>
+                  <span>個室あり</span>
+                </div>
+              </a>
+              <a href="stores-ekikita.html" class="block bg-brand-dark/60 border border-brand-light/10 p-4 hover:border-brand-gold/50 transition-all group/card">
+                <h4 class="font-serif text-base tracking-widest text-brand-light mb-1 group-hover/card:text-brand-gold transition-colors">安芸・瀬戸 広島駅北店 →</h4>
+                <p class="text-xs font-sans text-brand-muted mb-3">新幹線口より徒歩3分、開放的な空間。</p>
+                <div class="text-[11px] font-sans text-brand-muted/70 flex justify-between">
+                  <span>11:30〜23:00</span>
+                  <span>駅近・テーブル席</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="news.html" class="hover:text-brand-gold transition-colors duration-300">お知らせ</a></li>
+        <li><a href="contact.html" class="hover:text-brand-gold transition-colors duration-300">お問い合わせ</a></li>
+      </ul>
+
+      <!-- 追加部分：スマホドロワー用のロゴ表記（PCサイズ時は非表示） -->
+      <div class="mt-16 md:hidden text-brand-gold font-en text-sm tracking-widest">
+        AKISETO HIROSHIMA
+      </div>
+    </nav>
+    </nav>
+  </header>
+
+
+  <!-- ==========================================
+       2. 店舗用サブナビゲーション（広島駅北店）
+       ========================================== -->
+  <div class="relative z-30 w-full bg-brand-gray border-b border-brand-light/10 py-3 px-6 md:px-12 shadow-md mt-20 md:mt-24">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-xs md:text-sm font-serif tracking-widest">
+      
+      <!-- 左側：店舗切り替えドロップダウン ＆ サブメニュー項目 -->
+      <div class="flex items-center space-x-4 md:space-x-8 py-1">
+        
+        <!-- 店舗切り替えドロップダウン -->
+        <div class="relative group">
+          <button class="text-brand-gold font-bold flex items-center gap-1 cursor-pointer hover:text-brand-light transition-colors py-1">
+            <span>他のお店を見る</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <!-- ドロップダウンメニュー -->
+          <div class="absolute left-0 top-full pt-1 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <div class="bg-brand-gray border border-brand-light/10 py-2 shadow-2xl flex flex-col text-left">
+              <a href="menu.html" class="px-4 py-2.5 hover:bg-brand-dark hover:text-brand-gold transition-colors text-xs font-serif">
+                安芸・瀬戸 本通り店
+              </a>
+              <a href="menu-ekikita.html" class="px-4 py-2.5 hover:bg-brand-dark hover:text-brand-gold transition-colors text-xs font-serif text-brand-gold">
+                安芸・瀬戸 広島駅北店
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <span class="text-brand-light/20">|</span>
+        <a href="menu-ekikita.html" class="text-brand-gold hover:text-brand-gold transition-colors duration-300">メニュー</a>
+        <a href="coming-soon.html" class="hover:text-brand-gold transition-colors duration-300">店内の様子</a>
+        <a href="stores-ekikita.html#ekikita-access" class="hover:text-brand-gold transition-colors duration-300">アクセス</a>
+      </div>
+
+      <!-- 右側：お電話 ＆ web予約 -->
+      <div class="hidden md:flex items-center space-x-6 text-brand-light">
+        <div class="flex items-center space-x-2">
+          <span class="text-brand-muted text-xs">ご予約 :</span>
+          <a href="tel:082XXXXXXX" class="hover:text-brand-gold font-en text-base transition-colors duration-300">
+            082-XXX-XXXX
+          </a>
+        </div>
+        
+        <span class="text-brand-light/20">|</span>
+
+        <a href="contact.html" class="bg-brand-gold text-brand-dark px-4 py-1.5 text-xs font-serif tracking-widest hover:bg-brand-light transition-colors duration-300">
+          web予約
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       3. サブヒーロー（メインビジュアル）
+       ========================================== -->
+  <section class="relative w-full h-[40vh] min-h-[300px] overflow-hidden bg-brand-dark">
+    <div class="absolute inset-0 bg-black/50 z-10"></div>
+    <img src="img/common/AKISETO Menu.png" alt="メニュー背景" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 flex flex-col items-center justify-center z-20 text-center px-4">
+      <span class="font-en text-brand-gold text-sm tracking-[0.3em] uppercase mb-2">OUR MENU</span>
+      <h2 class="font-serif text-3xl md:text-5xl tracking-widest text-brand-light">
+        お品書き
+      </h2>
+      <div class="w-12 h-px bg-brand-gold mx-auto mt-6"></div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       4. メニュー一覧メインエリア
+       ========================================== -->
+  <main class="max-w-7xl mx-auto px-6 py-20">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- アイテム1：広島レモンサワー -->
+      <article class="bg-brand-gray border border-brand-light/10 flex flex-col overflow-hidden hover:border-brand-gold/40 transition-all duration-300 group">
+        <div class="relative h-64 overflow-hidden bg-brand-dark">
+          <img src="img/menu/lemonsour.jpg" alt="広島レモンサワー" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-baseline mb-3">
+            <h3 class="font-serif text-xl tracking-wider text-brand-light">広島レモンサワー</h3>
+            <span class="font-en text-brand-gold text-lg">¥750<span class="text-xs font-sans text-brand-muted">(税込)</span></span>
+          </div>
+          <div class="space-y-2 text-xs md:text-sm font-sans text-brand-muted leading-relaxed mb-6 flex-grow">
+            <p>レモンサワーの上に、キンキンに冷えたレモンフローズンを載せています。</p>
+            <p>広島レモン農家から仕入れたレモンを皮まで使うことで際立つ清涼感！年中お楽しみいただけます。</p>
+            <p class="text-brand-gold/80 text-xs pt-2">【期間】10月〜12月：グリーンレモン / 1月〜5月：イエローレモン</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- アイテム2：広島レモンスカッシュ -->
+      <article class="bg-brand-gray border border-brand-light/10 flex flex-col overflow-hidden hover:border-brand-gold/40 transition-all duration-300 group">
+        <div class="relative h-64 overflow-hidden bg-brand-dark">
+          <img src="img/menu/lemonsoda.jpg" alt="広島レモンスカッシュ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-baseline mb-3">
+            <h3 class="font-serif text-xl tracking-wider text-brand-light">広島レモンスカッシュ</h3>
+            <span class="font-en text-brand-gold text-lg">¥700<span class="text-xs font-sans text-brand-muted">(税込)</span></span>
+          </div>
+          <div class="space-y-2 text-xs md:text-sm font-sans text-brand-muted leading-relaxed mb-6 flex-grow">
+            <p>広島レモンサワーのノンアルコールVer.です。</p>
+            <p>爽やかな酸味とすっきりした炭酸が心地よい一杯です。</p>
+            <p class="text-brand-gold/80 text-xs pt-2">【期間】10月〜12月：グリーンレモン / 1月〜5月：イエローレモン</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- アイテム3：広島レモンビール -->
+      <article class="bg-brand-gray border border-brand-light/10 flex flex-col overflow-hidden hover:border-brand-gold/40 transition-all duration-300 group">
+        <div class="relative h-64 overflow-hidden bg-brand-dark">
+          <img src="img/menu/lemonbeer.jpg" alt="広島レモンビール" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-baseline mb-3">
+            <h3 class="font-serif text-xl tracking-wider text-brand-light">広島レモンビール</h3>
+            <span class="font-en text-brand-gold text-lg">¥990<span class="text-xs font-sans text-brand-muted">(税込)</span></span>
+          </div>
+          <div class="space-y-2 text-xs md:text-sm font-sans text-brand-muted leading-relaxed mb-6 flex-grow">
+            <p>「株式会社カナデル」様と業務提携！</p>
+            <p>「G7広島サミット」でも提供された特別なビールです。</p>
+            <p>瀬戸内で栽培されたこだわりのレモンを使用しています。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- アイテム4：AKISETOブラッド -->
+      <article class="bg-brand-gray border border-brand-light/10 flex flex-col overflow-hidden hover:border-brand-gold/40 transition-all duration-300 group">
+        <div class="relative h-64 overflow-hidden bg-brand-dark">
+          <span class="absolute top-3 right-3 bg-brand-gold text-brand-dark text-xs font-en px-3 py-1 font-bold z-10">NEW</span>
+          <img src="img/menu/AKISETOBlood.jpg" alt="AKISETOブラッド" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-baseline mb-3">
+            <h3 class="font-serif text-xl tracking-wider text-brand-light">AKISETOブラッド</h3>
+            <span class="font-en text-brand-gold text-lg">¥800<span class="text-xs font-sans text-brand-muted">(税込)</span></span>
+          </div>
+          <div class="space-y-2 text-xs md:text-sm font-sans text-brand-muted leading-relaxed mb-6 flex-grow">
+            <p>「AKISETO」の新しい看板商品。スタッフが開発しました。</p>
+            <p>広島産のトマトとブラッドオレンジを使用し、広島の熱い誇りを表現。</p>
+            <p>カクテル、焼酎ソーダ割、ジュースからお選びいただけます。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- アイテム5：広島 汁なし担々麺 -->
+      <article class="bg-brand-gray border border-brand-light/10 flex flex-col overflow-hidden hover:border-brand-gold/40 transition-all duration-300 group">
+        <div class="relative h-64 overflow-hidden bg-brand-dark">
+          <img src="img/menu/tantanmen.jpg" alt="広島 汁なし担々麺" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-baseline mb-3">
+            <h3 class="font-serif text-xl tracking-wider text-brand-light">広島 汁なし担々麺</h3>
+            <span class="font-en text-brand-gold text-lg">¥1,100<span class="text-xs font-sans text-brand-muted">(税込)</span></span>
+          </div>
+          <div class="space-y-2 text-xs md:text-sm font-sans text-brand-muted leading-relaxed mb-6 flex-grow">
+            <p>刺激的な山椒の痺れと濃厚な胡麻のコクが癖になる、広島名物。</p>
+            <p>シメの一杯にはもちろん、ガツンと効いたスパイスがお酒のおつまみにも最高です。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- アイテム6：ゲンコツ唐揚げ -->
+      <article class="bg-brand-gray border border-brand-light/10 flex flex-col overflow-hidden hover:border-brand-gold/40 transition-all duration-300 group">
+        <div class="relative h-64 overflow-hidden bg-brand-dark">
+          <img src="img/menu/karaage.jpg" alt="ゲンコツ唐揚げ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-baseline mb-3">
+            <h3 class="font-serif text-xl tracking-wider text-brand-light">ゲンコツ唐揚げ</h3>
+            <span class="font-en text-brand-gold text-lg">¥1,000<span class="text-xs font-sans text-brand-muted">(税込)</span></span>
+          </div>
+          <div class="space-y-2 text-xs md:text-sm font-sans text-brand-muted leading-relaxed mb-6 flex-grow">
+            <p>1個あたり約80gのゲンコツサイズの唐揚げが大人気！</p>
+            <p>外はカリッと、中はジューシーに仕上げた自慢の名物です。</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- ==========================================
+       5. 下部メッセージ
+       ========================================== -->
+  <section class="bg-brand-gray border-t border-brand-light/10 py-16 text-center px-6">
+    <h3 class="font-serif text-xl md:text-2xl tracking-widest text-brand-light mb-3">その他各種多数ございます！！</h3>
+    <p class="font-sans text-brand-muted text-sm tracking-wider">皆様のご来店を心よりお待ちしております</p>
+  </section>
+
+
+  <!-- フッター -->
+  <footer class="relative bg-brand-gray pt-20 pb-10 border-t border-brand-light/5">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
+
+<!-- フッターロゴエリア（文字画像のみ） -->
+      <div class="mb-10">
+        <a href="index.html" class="inline-block">
+          <img src="img/common/アートボード 1.png" alt="安芸・瀬戸 AKISETO" class="footer-logo-text">
+        </a>
+      </div>
+
+      <ul
+        class="flex flex-wrap justify-center gap-6 md:gap-10 font-sans text-sm tracking-widest text-brand-muted mb-16">
+        <li><a href="index.html" class="hover:text-brand-gold transition-colors">TOP</a></li>
+        <li><a href="menu.html" class="hover:text-brand-gold transition-colors">MENU</a></li>
+        <li><a href="stores.html" class="hover:text-brand-gold transition-colors">STORES</a></li>
+        <li><a href="news.html" class="hover:text-brand-gold transition-colors">NEWS</a></li>
+        <li><a href="contact.html" class="hover:text-brand-gold transition-colors">CONTACT</a></li>
+      </ul>
+
+      <p class="font-en text-brand-muted/50 text-xs tracking-widest">
+        &copy; 2026 AKISETO. ALL RIGHTS RESERVED.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ページトップへ戻るボタン -->
+  <button id="js-pagetop"
+    class="fixed right-6 bottom-6 w-12 h-12 border border-brand-gold/50 bg-brand-dark/80 text-brand-gold flex justify-center items-center rounded-full opacity-0 invisible transition-all duration-300 hover:bg-brand-gold hover:text-brand-dark z-40 backdrop-blur-sm"
+    aria-label="ページ上部へ戻る">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- メインJavaScriptの読み込み -->
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

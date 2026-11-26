@@ -1,0 +1,593 @@
+
+/* ========================================
+   1. 全体設定
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    font-family: "Lexend", "Zen Kaku Gothic New", sans-serif;
+    background: #f7f7f7;
+    color: rgb(40, 39, 42);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ========================================
+   2. ヘッダー
+======================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 6%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.site-title {
+    font-family: "Lexend", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #222;
+    text-decoration: none;
+}
+
+.profile-link {
+    color: #222;
+}
+
+
+/* ========================================
+   3. メインコンテンツ
+======================================== */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 24px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 45px;
+}
+
+.portfolio-section {
+    margin-bottom: 90px;
+}
+
+.section-title {
+    font-family: "Lexend", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* ========================================
+   4. ポートフォリオ作品一覧
+======================================== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.item {
+    position: relative;
+    background: #eee;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* catcafe PC・SP分割 */
+
+.item-split {
+    display: flex;
+}
+
+.split-half {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split-half:first-child {
+    border-right: 1px solid #ddd;
+}
+
+.split-half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ========================================
+   5. 作品詳細モーダル
+======================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 960px;
+    max-height: 90vh;
+    margin: auto;
+    padding: 80px 20px 25px;
+    border-radius: 8px;
+    background: #fff;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.modal-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* 閉じるボタン：画面右上に固定 */
+
+.close {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.close:hover {
+    background: #e60012;
+    transform: scale(1.08);
+}
+
+
+/* モーダルのメイン画像 */
+
+.modal-main-visual {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.modal-main-visual img {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-main-visual img.is-hidden {
+    display: none;
+}
+
+
+/* モーダルの作品情報 */
+
+.modal-description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.modal-description .left {
+    flex: 1 1 40%;
+    min-width: 0;
+}
+
+.modal-description .right {
+    flex: 1 1 55%;
+    min-width: 0;
+}
+
+.modal-description p {
+    margin-bottom: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.modal-description a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.modal-description a:hover {
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   6. Web Design・デザインカンプ
+======================================== */
+
+.work-section {
+    margin-bottom: 100px;
+    scroll-margin-top: 30px;
+}
+
+.work-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.design-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.design-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    cursor: zoom-in;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.design-image:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ========================================
+   7. PC・スマホ切り替え
+======================================== */
+
+.version-switch {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.version-switch button {
+    min-width: 120px;
+    padding: 13px 25px;
+    border: 1px solid #222;
+    background: #fff;
+    color: #222;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.version-switch button.active,
+.version-switch button:hover {
+    background: #222;
+    color: #fff;
+}
+
+
+/* ========================================
+   8. Figma Prototype
+======================================== */
+
+.prototype {
+    margin-top: 50px;
+}
+
+.prototype-container {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.prototype-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* ========================================
+   9. デザイン画像拡大モーダル
+======================================== */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1500;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.image-modal.show {
+    display: flex;
+}
+
+.image-modal img {
+    display: block;
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    cursor: default;
+}
+
+.image-modal-close {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 1510;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-modal-close:hover {
+    background: #e60012;
+}
+
+
+/* ========================================
+   10. ページ上部へ戻るボタン
+======================================== */
+
+#back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+
+    background: #222;
+    color: #fff;
+    font-size: 24px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.3s,
+        visibility 0.3s,
+        transform 0.3s,
+        background 0.2s;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: #555;
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   11. スマートフォン対応
+======================================== */
+
+@media screen and (max-width: 768px) {
+
+    main {
+        padding: 45px 18px;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .modal-content {
+        width: 94%;
+        padding: 75px 15px 20px;
+    }
+
+    .modal-main-visual {
+        flex-direction: column;
+    }
+
+    .modal-description {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .prototype-container {
+        height: 650px;
+    }
+
+    .design-gallery {
+        gap: 20px;
+    }
+}
+
+
+/* ========================================
+   12. 小型スマートフォン対応
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    main {
+        padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .version-switch button {
+        flex: 1;
+        min-width: 0;
+        padding: 12px 10px;
+    }
+
+    .design-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .prototype-container {
+        height: 600px;
+    }
+
+    .close {
+        top: 15px;
+        right: 15px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.7rem;
+    }
+
+    .image-modal {
+        padding: 15px;
+    }
+
+    .image-modal img {
+        max-width: 100%;
+        max-height: 85vh;
+    }
+
+    .image-modal-close {
+        top: 15px;
+        right: 15px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.7rem;
+    }
+
+    #back-to-top {
+        right: 18px;
+        bottom: 18px;
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+    }
+}
+
+
+/* ========================================
+   13. 動きを控える設定
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

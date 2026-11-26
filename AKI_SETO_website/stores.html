@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>店舗案内 | 安芸・瀬戸 AKISETO</title>
+
+  <link rel="icon" href="img/common/アートボード 2.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/common/アートボード 2.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark': '#121212',
+            'brand-gray': '#1c1c1c',
+            'brand-gold': '#c5a059',
+            'brand-light': '#f4f4f0',
+            'brand-muted': '#a0a09c',
+          },
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            en: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-brand-dark text-brand-light font-sans selection:bg-brand-gold selection:text-brand-dark">
+
+  <!-- ヘッダー -->
+  <header id="header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-gradient-to-b from-black/80 to-transparent py-4 px-6 md:px-12 flex justify-between items-center">
+    <h1 class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="img/common/アートボード 1.png" alt="安芸・瀬戸 AKISETO" class="logo-text">
+        <img src="img/common/アートボード 2.png" alt="" class="logo-torii">
+      </a>
+    </h1>
+
+    <button id="hamburger"
+      class="hamburger-btn relative z-50 w-8 h-8 flex flex-col justify-center items-center gap-1.5 focus:outline-none md:hidden"
+      aria-label="メニューを開く">
+      <span class="hamburger-line line-1 w-6 h-px bg-brand-light block"></span>
+      <span class="hamburger-line line-2 w-6 h-px bg-brand-light block"></span>
+      <span class="hamburger-line line-3 w-6 h-px bg-brand-light block"></span>
+    </button>
+
+    <nav id="nav-menu"
+      class="nav-drawer fixed inset-0 bg-brand-dark/95 backdrop-blur-md z-40 flex flex-col justify-center items-center translate-x-full transition-transform duration-300 md:translate-x-0 md:static md:bg-transparent md:backdrop-blur-none md:flex-row md:justify-end md:inset-auto">
+      <ul class="text-center md:text-left space-y-8 md:space-y-0 md:flex md:space-x-8 font-serif text-lg md:text-sm tracking-widest items-center">
+        <li><a href="index.html" class="hover:text-brand-gold transition-colors duration-300">トップページ</a></li>
+        <li class="relative group flex items-center">
+          <span id="store-menu-btn"
+            class="flex items-center gap-1 cursor-pointer hover:text-brand-gold transition-colors duration-300">
+            お店と料理
+            <svg xmlns="http://www.w3.org/2000/svg" id="store-arrow" class="h-4 w-4 transition-transform duration-300"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div id="store-dropdown"
+            class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible transition-all duration-300 z-50 w-[600px] max-w-[90vw]">
+            <div class="bg-brand-gray border border-brand-light/10 p-6 shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <a href="stores-hondori.html"
+                class="block bg-brand-dark/60 border border-brand-light/10 p-4 hover:border-brand-gold/50 transition-all group/card">
+                <h4 class="font-serif text-base tracking-widest text-brand-light mb-1 group-hover/card:text-brand-gold transition-colors">
+                  安芸・瀬戸 本通り店 →
+                </h4>
+                <p class="text-xs font-sans text-brand-muted mb-3">広島の中心街、大人の隠れ家。</p>
+                <div class="text-[11px] font-sans text-brand-muted/70 flex justify-between">
+                  <span>17:00〜23:00</span>
+                  <span>個室あり</span>
+                </div>
+              </a>
+              <a href="stores-ekikita.html"
+                class="block bg-brand-dark/60 border border-brand-light/10 p-4 hover:border-brand-gold/50 transition-all group/card">
+                <h4 class="font-serif text-base tracking-widest text-brand-light mb-1 group-hover/card:text-brand-gold transition-colors">
+                  安芸・瀬戸 広島駅北店 →
+                </h4>
+                <p class="text-xs font-sans text-brand-muted mb-3">新幹線口より徒歩3分、開放的な空間。</p>
+                <div class="text-[11px] font-sans text-brand-muted/70 flex justify-between">
+                  <span>11:30〜23:00</span>
+                  <span>駅近・テーブル席</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li><a href="news.html" class="hover:text-brand-gold transition-colors duration-300">お知らせ</a></li>
+        <li><a href="contact.html" class="hover:text-brand-gold transition-colors duration-300">お問い合わせ</a></li>
+      </ul>
+      <div class="mt-16 md:hidden text-brand-gold font-en text-sm tracking-widest">
+        AKISETO HIROSHIMA
+      </div>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="pt-32 pb-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="font-en text-brand-gold tracking-widest text-xl">STORES</p>
+      <h2 class="font-serif text-3xl md:text-4xl mt-2 tracking-widest">店舗案内</h2>
+      <div class="w-12 h-px bg-brand-gold mx-auto mt-6 mb-16"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <!-- 本通り店 -->
+        <div class="bg-brand-gray border border-brand-light/10 overflow-hidden group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="img/stores/AKISETO 本通り店外観.png" alt="安芸・瀬戸 本通り店"
+              class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700">
+          </div>
+          <div class="p-8">
+            <h3 class="font-serif text-2xl tracking-widest text-brand-light mb-4">安芸・瀬戸 本通り店</h3>
+            <p class="font-sans text-brand-muted text-sm leading-relaxed mb-6">
+              広島の中心街、喧騒を離れた大人の隠れ家。こだわりの広島レモンとお酒、上質な空間をお楽しみください。
+            </p>
+            <div class="space-y-2 text-xs font-sans text-brand-muted mb-8 border-t border-brand-light/10 pt-4">
+              <p>【営業時間】17:00 〜 23:00（L.O. 22:00）</p>
+              <p>【定休日】不定休</p>
+              <p>【電話番号】082-XXX-XXXX</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="contact.html"
+                class="flex-1 text-center border border-brand-gold/50 text-brand-gold py-2.5 px-4 font-serif text-sm tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-colors duration-300">
+                ご予約
+              </a>
+              <a href="stores-hondori.html"
+                class="flex-1 text-center bg-brand-gold text-brand-dark py-2.5 px-4 font-serif text-sm tracking-widest hover:bg-brand-light transition-colors duration-300">
+                店舗詳細を見る →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 広島駅北店 -->
+        <div class="bg-brand-gray border border-brand-light/10 overflow-hidden group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="img/stores/AKISETO 広島駅北店外観.png" alt="安芸・瀬戸 広島駅北店"
+              class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700">
+          </div>
+          <div class="p-8">
+            <h3 class="font-serif text-2xl tracking-widest text-brand-light mb-4">安芸・瀬戸 広島駅北店</h3>
+            <p class="font-sans text-brand-muted text-sm leading-relaxed mb-6">
+              広島駅新幹線口より徒歩圏内。出張やご旅行の際にも立ち寄りやすい、開放感あふれる店舗です。
+            </p>
+            <div class="space-y-2 text-xs font-sans text-brand-muted mb-8 border-t border-brand-light/10 pt-4">
+              <p>【営業時間】11:30 〜 23:00（L.O. 22:00）</p>
+              <p>【定休日】不定休</p>
+              <p>【電話番号】082-YYY-YYYY</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="contact.html"
+                class="flex-1 text-center border border-brand-gold/50 text-brand-gold py-2.5 px-4 font-serif text-sm tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-colors duration-300">
+                ご予約
+              </a>
+              <a href="stores-ekikita.html"
+                class="flex-1 text-center bg-brand-gold text-brand-dark py-2.5 px-4 font-serif text-sm tracking-widest hover:bg-brand-light transition-colors duration-300">
+                店舗詳細を見る →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="relative bg-brand-gray pt-20 pb-10 border-t border-brand-light/5">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
+      <div class="mb-10">
+        <a href="index.html" class="inline-block">
+          <img src="img/common/アートボード 1.png" alt="安芸・瀬戸 AKISETO" class="footer-logo-text">
+        </a>
+      </div>
+      <ul class="flex flex-wrap justify-center gap-6 md:gap-10 font-sans text-sm tracking-widest text-brand-muted mb-16">
+        <li><a href="index.html" class="hover:text-brand-gold transition-colors">TOP</a></li>
+        <li><a href="menu.html" class="hover:text-brand-gold transition-colors">MENU</a></li>
+        <li><a href="stores.html" class="hover:text-brand-gold transition-colors">STORES</a></li>
+        <li><a href="news.html" class="hover:text-brand-gold transition-colors">NEWS</a></li>
+        <li><a href="contact.html" class="hover:text-brand-gold transition-colors">CONTACT</a></li>
+      </ul>
+      <p class="font-en text-brand-muted/50 text-xs tracking-widest">&copy; 2026 AKISETO. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <button id="js-pagetop"
+    class="fixed right-6 bottom-6 w-12 h-12 border border-brand-gold/50 bg-brand-dark/80 text-brand-gold flex justify-center items-center rounded-full opacity-0 invisible transition-all duration-300 hover:bg-brand-gold hover:text-brand-dark z-40 backdrop-blur-sm"
+    aria-label="ページ上部へ戻る">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

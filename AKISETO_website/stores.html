@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKISETOのトップページ</title>
+
+  <!-- ★ ファビコンの設定 ★ -->
+  <link rel="icon" href="img/common/AKISETO logo favicon.png" type="image/png">
+  <!-- スマホのホーム画面に追加した時のアイコン設定（任意） -->
+  <link rel="apple-touch-icon" href="img/common/AKISETO logo favicon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー（全ページ共通） -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </a>
+      </h1>
+
+      <!-- ハンバーガーボタン -->
+      <button class="hamburger" id="js-hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- ナビゲーションメニュー -->
+      <nav class="nav" id="js-nav">
+        <!-- ドロワーメニュー用のロゴ -->
+        <div class="nav-logo">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </div>
+
+        <ul>
+          <li><a href="index.html"><img src="img/common/icon_top.png" alt=""><span>トップページ</span></a></li>
+          <li><a href="menu.html"><img src="img/common/icon_menu.png" alt=""><span>メニュー</span></a></li>
+          <li><a href="stores.html"><img src="img/common/icon_map.png" alt=""><span>店舗情報</span></a></li>
+          <li><a href="news.html"><img src="img/common/icon_news.png" alt=""><span>お知らせ</span></a></li>
+          <li><a href="contact.html"><img src="img/common/icon_contact.png" alt=""><span>お問い合わせ</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <!-- メニューページのサブヒーロー（上部ビジュアル） -->
+ <section class="sub-hero">
+    <div class="sub-hero-bg">
+      <img src="img/common/AKISETO Access.png" alt="店舗情報背景">
+    </div>
+
+    <div class="sub-hero-inner">
+      <img src="img/common/Access inner.png" alt="店舗情報" class="sub-hero-title-img">
+    </div>
+  </section>
+
+  <!-- メインコンテンツエリア -->
+  <main class="access-page-main">
+    <div class="access-container">
+
+      <!-- セクションタイトル -->
+      <div class="section-title">
+        <h2>ACCESS</h2>
+        <span>アクセス</span>
+      </div>
+
+      <!-- 店舗 1: 本通店 -->
+      <section class="store-block">
+        <h3 class="store-name">本通り店</h3>
+        <div class="store-description">
+          <p>本通り店は本通り商店街の中心にある店舗です。</p>
+          <p>買い物帰りのお休みや、お友達とのランチやディナーにおすすめです。</p>
+          <p>また周辺に多く居酒屋もありますので〆やハシゴ酒と楽しむ方におすすめです。</p>
+        </div>
+
+        <!-- 外観画像 -->
+        <div class="store-image">
+          <img src="img/stores/AKISETO 本通り店外観.png" alt="本通り店 外観">
+        </div>
+
+        <!-- Google Map埋め込み枠 -->
+        <div class="store-map">
+          <!-- iframeまたは代替画像を配置（以下はGoogleマップ埋め込み例） -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.3!2d132.455!3d34.39!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDIzJzI0LjAiTiAxMzLCsDI3JzE4LjAiRQ!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp" 
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- 店舗スペック（テーブル形式） -->
+        <dl class="store-details">
+          <div class="detail-row">
+            <dt>住所</dt>
+            <dd>〒730-0035<br>広島市中区本通1-1</dd>
+          </div>
+          <div class="detail-row">
+            <dt>電話番号</dt>
+            <dd class="tel-dd">
+              <span>082-000-0000</span>
+              <a href="tel:0820000000" class="tel-btn">電話をかける</a>
+            </dd>
+          </div>
+          <div class="detail-row">
+            <dt>営業時間</dt>
+            <dd>
+              平日<br>
+              11:00～15:00<br>
+              17:00～0:00<br>
+              土日祝<br>
+              13:00～0:00<br>
+              ※ラストオーダーは営業終了の30分前までです。
+            </dd>
+          </div>
+          <div class="detail-row">
+            <dt>定休日</dt>
+            <dd>第1、第3月曜日</dd>
+          </div>
+        </dl>
+      </section>
+
+
+      <!-- 店舗 2: 広島駅北店 -->
+      <section class="store-block">
+        <h3 class="store-name">広島駅北店</h3>
+        <div class="store-description">
+          <p>広島駅新幹線口（北口）の近くにございます。</p>
+          <p>新幹線や電車の待ち時間や、ご旅行・出張の際にも立ち寄りやすい店舗です。</p>
+          <p>アクセス抜群なので県外からのお客様にもおすすめです。</p>
+        </div>
+
+        <!-- 外観画像 -->
+        <div class="store-image">
+          <img src="img/stores/AKISETO 広島駅北店外観.png" alt="本通店 外観">
+        </div>
+
+        <!-- Google Map埋め込み枠 -->
+        <div class="store-map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.3!2d132.475!3d34.398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDIzJzUzLjMiTiAxMzLCsDI4JzMwLjAiRQ!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp" 
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- 店舗スペック -->
+        <dl class="store-details">
+          <div class="detail-row">
+            <dt>住所</dt>
+            <dd>〒732-0053<br>広島市東区若草町1-1</dd>
+          </div>
+          <div class="detail-row">
+            <dt>電話番号</dt>
+            <dd class="tel-dd">
+              <span>082-000-0000</span>
+              <a href="tel:0820000000" class="tel-btn">電話をかける</a>
+            </dd>
+          </div>
+          <div class="detail-row">
+            <dt>営業時間</dt>
+            <dd>
+              平日<br>
+              11:00～15:00<br>
+              17:00～0:00<br>
+              土日祝<br>
+              13:00～0:00<br>
+              ※ラストオーダーは営業終了の30分前までです。
+            </dd>
+          </div>
+          <div class="detail-row">
+            <dt>定休日</dt>
+            <dd>第1、第3月曜日</dd>
+          </div>
+        </dl>
+      </section>
+
+    </div>
+  </main>
+
+ <!-- フッター（index除く全ページ共通） -->
+  <footer class="footer">
+    <div class="footer-bg">
+     <img src="img/common/footer.png" alt="店内イメージ">
+    </div>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="img/common/footer_logo.png" alt="AKISETO">
+      </a>
+    </div>
+  </footer>
+
+  <!-- ページトップへ戻るボタン -->
+  <button type="button" class="page-top-btn" id="js-pagetop" aria-label="ページ上部へ戻る">
+     <img src="img/common/btn_pagetop.png" alt="上へ">
+  </button>
+
+  <!-- 共通JavaScriptの読み込み -->
+  <script src="js/main.js"></script>
+</body>
+</html>

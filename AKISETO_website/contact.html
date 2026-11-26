@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKISETOのトップページ</title>
+
+  <!-- ★ ファビコンの設定 ★ -->
+  <link rel="icon" href="img/common/AKISETO logo favicon.png" type="image/png">
+  <!-- スマホのホーム画面に追加した時のアイコン設定（任意） -->
+  <link rel="apple-touch-icon" href="img/common/AKISETO logo favicon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー（全ページ共通） -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </a>
+      </h1>
+
+      <!-- ハンバーガーボタン -->
+      <button class="hamburger" id="js-hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- ナビゲーションメニュー -->
+      <nav class="nav" id="js-nav">
+        <!-- ドロワーメニュー用のロゴ -->
+        <div class="nav-logo">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </div>
+
+        <ul>
+          <li><a href="index.html"><img src="img/common/icon_top.png" alt=""><span>トップページ</span></a></li>
+          <li><a href="menu.html"><img src="img/common/icon_menu.png" alt=""><span>メニュー</span></a></li>
+          <li><a href="stores.html"><img src="img/common/icon_map.png" alt=""><span>店舗情報</span></a></li>
+          <li><a href="news.html"><img src="img/common/icon_news.png" alt=""><span>お知らせ</span></a></li>
+          <li><a href="contact.html"><img src="img/common/icon_contact.png" alt=""><span>お問い合わせ</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <!-- メニューページのサブヒーロー（上部ビジュアル） -->
+  <section class="sub-hero">
+    <div class="sub-hero-bg">
+      <img src="img/common/AKISETO Contact.png" alt="お問い合わせ画像背景">
+    </div>
+
+    <div class="sub-hero-inner">
+      <img src="img/common/Contact  inner.png" alt="お問い合わせ" class="sub-hero-title-img">
+    </div>
+  </section>
+
+  <!-- ★ここからメインエリア★ -->
+  <main class="contact-page-main">
+    <div class="contact-container">
+
+      <!-- ★追加：店内の雰囲気が伝わる画像★ -->
+      <div class="contact-image-wrapper">
+        <img src="img/contact/Contact visual.png" alt="AKISETO 店内の様子">
+      </div>
+
+      <!-- 導入テキスト -->
+      <div class="contact-intro-text">
+        <p>「AKISETO」ではお客様のお声を頂いております。</p>
+        <p>
+          やってほしいイベント、商品化してほしいメニューなどのご要望、<br>
+          店舗へのご意見がございましたら<br>
+          下記お問い合わせフォームよりお願いします。
+        </p>
+      </div>
+
+      <!-- お問い合わせフォーム -->
+      <div class="contact-form-wrapper">
+        <form action="#" method="post" class="contact-form">
+          
+          <!-- 氏名 -->
+          <div class="form-group">
+            <label for="name">氏名 <span class="required">（必須）</span></label>
+            <input type="text" id="name" name="name" placeholder="氏名" required>
+          </div>
+
+          <!-- メールアドレス -->
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">（必須）</span></label>
+            <input type="email" id="email" name="email" placeholder="mail@akiseto.com" required>
+          </div>
+
+          <!-- コメント -->
+          <div class="form-group">
+            <label for="comment">コメント</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="フリーテキスト"></textarea>
+          </div>
+
+          <!-- 送信ボタン -->
+          <div class="form-submit">
+            <button type="submit" class="submit-btn">送信</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+ <!-- フッター（index除く全ページ共通） -->
+  <footer class="footer">
+    <div class="footer-bg">
+     <img src="img/common/footer.png" alt="店内イメージ">
+    </div>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="img/common/footer_logo.png" alt="AKISETO">
+      </a>
+    </div>
+  </footer>
+
+  <!-- ページトップへ戻るボタン -->
+  <button type="button" class="page-top-btn" id="js-pagetop" aria-label="ページ上部へ戻る">
+     <img src="img/common/btn_pagetop.png" alt="上へ">
+  </button>
+
+  <!-- 共通JavaScriptの読み込み -->
+  <script src="js/main.js"></script>
+</body>
+</html>

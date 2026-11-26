@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">準備中 | 安芸・瀬戸 AKISETO</title>
+
+<!-- ファビコン設定 -->
+<link rel="icon" href="img/common/アートボード 2.png" type="image/png">
+<link rel="apple-touch-icon" href="img/common/アートボード 2.png">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand-dark': '#121212',
+          'brand-gray': '#1c1c1c',
+          'brand-gold': '#c5a059',
+          'brand-light': '#f4f4f0',
+          'brand-muted': '#a0a09c',
+        },
+        fontFamily: {
+          serif: ['"Noto Serif JP"', 'serif'],
+          sans: ['"Noto Sans JP"', 'sans-serif'],
+          en: ['"Cinzel"', 'serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-brand-dark text-brand-light font-sans selection:bg-brand-gold selection:text-brand-dark min-h-screen flex flex-col justify-between">
+
+  <!-- ヘッダー -->
+  <header class="w-full bg-brand-dark/95 backdrop-blur-md py-4 px-6 md:px-12 flex justify-between items-center border-b border-brand-light/10">
+    <h1 class="logo-container">
+      <a href="index.html" class="logo-link flex items-center">
+        <img src="img/common/アートボード 1.png" alt="安芸・瀬戸 AKISETO" class="logo-text h-14 md:h-16 w-auto object-contain brightness-0 invert">
+      </a>
+    </h1>
+    <a href="news.html" class="font-serif text-xs tracking-widest text-brand-muted hover:text-brand-gold transition-colors flex items-center gap-1">
+      <span>← お知らせ一覧へ戻る</span>
+    </a>
+  </header>
+
+  <!-- メインコンテンツ（準備中メッセージ） -->
+  <main class="flex-grow flex items-center justify-center px-6 py-20">
+    <div class="max-w-xl w-full text-center bg-brand-gray border border-brand-light/10 p-10 md:p-16 shadow-2xl relative overflow-hidden">
+      
+      <!-- 装飾用のゴールドのライン -->
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent"></div>
+
+      <span class="font-en text-brand-gold text-sm tracking-[0.3em] uppercase block mb-4" id="news-category">
+        COMING SOON
+      </span>
+      
+      <h2 class="font-serif text-xl md:text-2xl leading-relaxed tracking-widest text-brand-light mb-6" id="main-message">
+        お知らせの詳細は<br>ただいま準備中でございます
+      </h2>
+
+      <div class="w-12 h-px bg-brand-gold mx-auto mb-8"></div>
+
+      <p class="font-sans text-brand-muted text-sm md:text-base leading-relaxed tracking-wider mb-12">
+        いつも「安芸・瀬戸」をご利用いただき誠にありがとうございます。<br>
+        詳細情報やご予約方法などを現在丁寧に準備しております。<br>
+        公開まで今しばらくお待ちくださいませ。
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="news.html" class="bg-brand-gold text-brand-dark px-8 py-3 font-serif text-xs tracking-widest hover:bg-brand-light transition-colors duration-300">
+          お知らせ一覧へ
+        </a>
+        <a href="index.html" class="border border-brand-light/20 text-brand-light px-8 py-3 font-serif text-xs tracking-widest hover:border-brand-gold hover:text-brand-gold transition-colors duration-300">
+          総合トップへ
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-brand-gray/50 py-8 border-t border-brand-light/5 text-center">
+    <p class="font-en text-brand-muted/50 text-xs tracking-widest">&copy; 2026 AKISETO. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <!-- URLによって表示内容を自動切り替えるJS -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    const pageTitle = document.getElementById('page-title');
+    const newsCategory = document.getElementById('news-category');
+    const mainMessage = document.getElementById('main-message');
+
+    if (id === 'carp') {
+      pageTitle.textContent = "準備中 | 広島東洋カープ戦 パブリックビューイング | AKISETO";
+      newsCategory.textContent = "EVENT / PUBLIC VIEWING";
+      mainMessage.innerHTML = "広島東洋カープ戦<br>パブリックビューイングは<br>ただいま準備中でございます";
+    } else if (id === 'soccer') {
+      pageTitle.textContent = "準備中 | サッカーW杯 特別観戦ラウンジ | AKISETO";
+      newsCategory.textContent = "INFO / SPECIAL LOUNGE";
+      mainMessage.innerHTML = "サッカーW杯<br>特別観戦ラウンジは<br>ただいま準備中でございます";
+    } else if (id === 'menu') {
+      pageTitle.textContent = "準備中 | 新レギュラーメニュー「AKISETOブラッド」 | AKISETO";
+      newsCategory.textContent = "NEW MENU";
+      mainMessage.innerHTML = "新レギュラーメニュー<br>「AKISETOブラッド」は<br>ただいま準備中でございます";
+    }
+  </script>
+
+</body>
+</html>

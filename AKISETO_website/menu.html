@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKISETOのトップページ</title>
+
+  <!-- ★ ファビコンの設定 ★ -->
+  <link rel="icon" href="img/common/AKISETO logo favicon.png" type="image/png">
+  <!-- スマホのホーム画面に追加した時のアイコン設定（任意） -->
+  <link rel="apple-touch-icon" href="img/common/AKISETO logo favicon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー（全ページ共通） -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </a>
+      </h1>
+
+      <!-- ハンバーガーボタン -->
+      <button class="hamburger" id="js-hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- ナビゲーションメニュー -->
+      <nav class="nav" id="js-nav">
+        <!-- ドロワーメニュー用のロゴ -->
+        <div class="nav-logo">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </div>
+
+        <ul>
+          <li><a href="index.html"><img src="img/common/icon_top.png" alt=""><span>トップページ</span></a></li>
+          <li><a href="menu.html"><img src="img/common/icon_menu.png" alt=""><span>メニュー</span></a></li>
+          <li><a href="stores.html"><img src="img/common/icon_map.png" alt=""><span>店舗情報</span></a></li>
+          <li><a href="news.html"><img src="img/common/icon_news.png" alt=""><span>お知らせ</span></a></li>
+          <li><a href="contact.html"><img src="img/common/icon_contact.png" alt=""><span>お問い合わせ</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メニューページのサブヒーロー（上部ビジュアル） -->
+  <section class="sub-hero">
+    <div class="sub-hero-bg">
+      <img src="img/common/AKISETO Menu.png" alt="メニュー背景">
+    </div>
+
+    <div class="sub-hero-inner">
+      <img src="img/common/Menu inner.png" alt="メニュー" class="sub-hero-title-img">
+    </div>
+  </section>
+
+  <!-- メニュー一覧メインエリア -->
+  <main class="menu-page-main">
+    <div class="menu-container">
+
+      <div class="menu-grid">
+
+        <!-- アイテム1 -->
+        <article class="menu-card">
+          <div class="menu-card-img">
+            <img src="img/menu/lemonsour.png" alt="広島レモンサワー">
+          </div>
+          <h2 class="menu-card-title">広島レモンサワー</h2>
+          <p class="menu-card-price">¥750(税込)</p>
+          <div class="menu-card-desc">
+            <p>レモンサワーの上に、キンキンに冷えたレモンフローズンを載せています。</p>
+            <p>広島レモン農家から仕入れたレモンを皮まで使うことで際立つ清涼感！年中お楽しみいただけます。</p>
+            <p class="menu-card-note">10月〜12月頃：グリーンレモン<br>1月〜5月頃：イエローレモン</p>
+          </div>
+        </article>
+
+        <!-- アイテム2 -->
+        <article class="menu-card">
+          <div class="menu-card-img">
+            <img src="img/menu/lemonsoda.png" alt="広島レモンスカッシュ">
+          </div>
+          <h2 class="menu-card-title">広島レモンスカッシュ</h2>
+          <p class="menu-card-price">¥700(税込)</p>
+          <div class="menu-card-desc">
+            <p>※広島レモンサワーのノンアルコールVer.です</p>
+            <p class="menu-card-note">10月〜12月頃：グリーンレモン<br>1月〜5月頃：イエローレモン</p>
+          </div>
+        </article>
+
+        <!-- アイテム3 -->
+        <article class="menu-card">
+          <div class="menu-card-img">
+            <img src="img/menu/lemonbeer.png" alt="広島レモンビール">
+          </div>
+          <h2 class="menu-card-title">広島レモンビール</h2>
+          <p class="menu-card-price">¥990(税込)</p>
+          <div class="menu-card-desc">
+            <p>「株式会社カナデル」様と業務提携！</p>
+            <p>「G7広島サミット」でも提供されたビールです。</p>
+            <p>瀬戸内で栽培されたこだわりのレモンを使用しています。</p>
+          </div>
+        </article>
+
+        <!-- アイテム4 -->
+        <article class="menu-card">
+          <div class="menu-card-img">
+            <span class="badge-new">NEW</span>
+            <img src="img/menu/AKISETOBlood.png" alt="AKISETOブラッド">
+          </div>
+          <h2 class="menu-card-title">AKISETOブラッド</h2>
+          <p class="menu-card-price">¥800(税込)</p>
+          <div class="menu-card-desc">
+            <p>「AKISETO」の新しい看板商品。広島の新しい定番となるように当店スタッフで開発しました。</p>
+            <p>広島産のトマトとブラッドオレンジを使用し、広島の熱い誇りをイメージしました。</p>
+            <p>カクテル、焼酎ソーダ割、ジュースからお選びいただけます。</p>
+          </div>
+        </article>
+
+        <!-- アイテム5 -->
+        <article class="menu-card">
+          <div class="menu-card-img">
+            <img src="img/menu/tantanmen.png" alt="広島 汁なし担々麺">
+          </div>
+          <h2 class="menu-card-title">広島 汁なし担々麺</h2>
+          <p class="menu-card-price">¥1,100(税込)</p>
+          <div class="menu-card-desc">
+            <p>刺激的な山椒の痺れと濃厚な胡麻のコクが癖になる、広島名物「汁なし担々麺」。</p>
+            <p>シメの一杯にはもちろん、ガツンと効いたスパイスがお酒のおつまみにも最高です。</p>
+          </div>
+        </article>
+
+        <!-- アイテム6 -->
+        <article class="menu-card">
+          <div class="menu-card-img">
+            <img src="img/menu/karaage.png" alt="ゲンコツ唐揚げ">
+          </div>
+          <h2 class="menu-card-title">ゲンコツ唐揚げ</h2>
+          <p class="menu-card-price">¥1,000(税込)</p>
+          <div class="menu-card-desc">
+            <p>1個あたり約80gのゲンコツサイズの唐揚げが大人気！</p>
+            <p>「AKISETO」自慢の名物です。</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+  <section class="menu-bottom-section">
+    <div class="menu-bottom-msg">
+      <p class="msg-large">その他各種多数ございます！！</p>
+      <p class="msg-sub">皆様のご来店を心よりお待ちしております</p>
+    </div>
+  </section>
+
+ <!-- フッター（index除く全ページ共通） -->
+  <footer class="footer">
+    <div class="footer-bg">
+     <img src="img/common/footer.png" alt="店内イメージ">
+    </div>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="img/common/footer_logo.png" alt="AKISETO">
+      </a>
+    </div>
+  </footer>
+
+  <!-- ページトップへ戻るボタン -->
+  <button type="button" class="page-top-btn" id="js-pagetop" aria-label="ページ上部へ戻る">
+     <img src="img/common/btn_pagetop.png" alt="上へ">
+  </button>
+
+  <!-- 共通JavaScriptの読み込み -->
+  <script src="js/main.js"></script>
+</body>
+</html>

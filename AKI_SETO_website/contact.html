@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | AKISETO 安芸・瀬戸</title>
+
+  <!-- ファビコン設定 -->
+  <link rel="icon" href="img/common/アートボード 2.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/common/アートボード 2.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark': '#121212',
+            'brand-gray': '#1c1c1c',
+            'brand-gold': '#c5a059',
+            'brand-light': '#f4f4f0',
+            'brand-muted': '#a0a09c',
+          },
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            en: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- カスタムCSSの読み込み -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-brand-dark text-brand-light font-sans selection:bg-brand-gold selection:text-brand-dark">
+
+  <!-- ヘッダー -->
+  <header id="header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-gradient-to-b from-black/80 to-transparent py-4 px-6 md:px-12 flex justify-between items-center">
+
+    <!-- ロゴエリア -->
+    <h1 class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="img/common/アートボード 1.png" alt="安芸・瀬戸 AKISETO" class="logo-text">
+        <img src="img/common/アートボード 2.png" alt="" class="logo-torii">
+      </a>
+    </h1>
+
+    <!-- ハンバーガーボタン（md:hidden を追加してPC表示時は非表示） -->
+    <button id="hamburger"
+      class="hamburger-btn relative z-50 w-8 h-8 flex flex-col justify-center items-center gap-1.5 focus:outline-none md:hidden"
+      aria-label="メニューを開く">
+      <span class="hamburger-line line-1 w-6 h-px bg-brand-light block"></span>
+      <span class="hamburger-line line-2 w-6 h-px bg-brand-light block"></span>
+      <span class="hamburger-line line-3 w-6 h-px bg-brand-light block"></span>
+    </button>
+
+    <!-- ナビゲーション（PCサイズではヘッダー右側に横並び表示） -->
+    <nav id="nav-menu"
+      class="nav-drawer fixed inset-0 bg-brand-dark/95 backdrop-blur-md z-40 flex flex-col justify-center items-center translate-x-full transition-transform duration-300 md:translate-x-0 md:static md:bg-transparent md:backdrop-blur-none md:flex-row md:justify-end md:inset-auto">
+      <ul
+        class="text-center md:text-left space-y-8 md:space-y-0 md:flex md:space-x-8 font-serif text-lg md:text-sm tracking-widest items-center">
+
+        <!-- トップページ -->
+        <li><a href="index.html" class="hover:text-brand-gold transition-colors duration-300">トップページ</a></li>
+
+        <!-- お店（メガメニュー） -->
+        <li class="relative group flex items-center">
+          <span id="store-menu-btn"
+            class="flex items-center gap-1 cursor-pointer hover:text-brand-gold transition-colors duration-300">
+            お店と料理
+            <svg xmlns="http://www.w3.org/2000/svg" id="store-arrow" class="h-4 w-4 transition-transform duration-300"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+
+          <!-- メガメニューパネル -->
+          <div id="store-dropdown"
+            class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible transition-all duration-300 z-50 w-[600px] max-w-[90vw]">
+            <div
+              class="bg-brand-gray border border-brand-light/10 p-6 shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+
+              <!-- 本通り店カード -->
+              <a href="stores-hondori.html"
+                class="block bg-brand-dark/60 border border-brand-light/10 p-4 hover:border-brand-gold/50 transition-all group/card">
+                <h4
+                  class="font-serif text-base tracking-widest text-brand-light mb-1 group-hover/card:text-brand-gold transition-colors">
+                  安芸・瀬戸 本通り店 →
+                </h4>
+                <p class="text-xs font-sans text-brand-muted mb-3">広島の中心街、大人の隠れ家。</p>
+                <div class="text-[11px] font-sans text-brand-muted/70 flex justify-between">
+                  <span>17:00〜23:00</span>
+                  <span>個室あり</span>
+                </div>
+              </a>
+
+              <!-- 広島駅北店カード -->
+              <a href="stores-ekikita.html"
+                class="block bg-brand-dark/60 border border-brand-light/10 p-4 hover:border-brand-gold/50 transition-all group/card">
+                <h4
+                  class="font-serif text-base tracking-widest text-brand-light mb-1 group-hover/card:text-brand-gold transition-colors">
+                  安芸・瀬戸 広島駅北店 →
+                </h4>
+                <p class="text-xs font-sans text-brand-muted mb-3">新幹線口より徒歩3分、開放的な空間。</p>
+                <div class="text-[11px] font-sans text-brand-muted/70 flex justify-between">
+                  <span>11:30〜23:00</span>
+                  <span>駅近・テーブル席</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </li>
+
+        <!-- お知らせ -->
+        <li><a href="news.html" class="hover:text-brand-gold transition-colors duration-300">お知らせ</a></li>
+
+        <!-- お問い合わせ -->
+        <li><a href="contact.html" class="hover:text-brand-gold transition-colors duration-300">お問い合わせ</a></li>
+
+      </ul>
+
+      <!-- スマホドロワー用のロゴ（PCサイズ時は非表示） -->
+      <div class="mt-16 md:hidden text-brand-gold font-en text-sm tracking-widest">
+        AKISETO HIROSHIMA
+      </div>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="pt-32 pb-24">
+    <div class="text-center mb-16 px-6">
+      <p class="font-en text-brand-gold tracking-widest text-xl">CONTACT</p>
+      <h2 class="font-serif text-3xl md:text-4xl mt-2 tracking-widest">お問い合わせ・ご予約</h2>
+      <div class="w-12 h-px bg-brand-gold mx-auto mt-6"></div>
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6">
+      <p class="text-brand-muted text-center mb-12 text-sm md:text-base leading-relaxed">
+        お気軽にお問い合わせください。<br>
+        お急ぎの場合はお電話（082-XXX-XXXX）にて直接ご連絡いただけますようお願い申し上げます。
+      </p>
+
+      <!-- フォーム -->
+      <form action="#" method="POST"
+        class="space-y-8 bg-brand-gray/50 p-8 md:p-12 rounded-sm border border-brand-light/5">
+        <div>
+          <label for="name" class="block font-serif text-sm tracking-widest mb-2 text-brand-light">お名前 <span
+              class="text-brand-gold text-xs">必須</span></label>
+          <input type="text" id="name" name="name" required
+            class="w-full bg-brand-dark border border-brand-light/20 px-4 py-3 text-brand-light focus:outline-none focus:border-brand-gold transition-colors">
+        </div>
+
+        <div>
+          <label for="email" class="block font-serif text-sm tracking-widest mb-2 text-brand-light">メールアドレス <span
+              class="text-brand-gold text-xs">必須</span></label>
+          <input type="email" id="email" name="email" required
+            class="w-full bg-brand-dark border border-brand-light/20 px-4 py-3 text-brand-light focus:outline-none focus:border-brand-gold transition-colors">
+        </div>
+
+        <div>
+          <label for="category" class="block font-serif text-sm tracking-widest mb-2 text-brand-light">お問い合わせ種別 <span
+              class="text-brand-gold text-xs">必須</span></label>
+          <select id="category" name="category"
+            class="w-full bg-brand-dark border border-brand-light/20 px-4 py-3 text-brand-light focus:outline-none focus:border-brand-gold transition-colors">
+            <option value="reservation">お席のご予約について</option>
+            <option value="party">貸切・イベント利用について</option>
+            <option value="other">その他のお問い合わせ</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="block font-serif text-sm tracking-widest mb-2 text-brand-light">お問い合わせ内容 <span
+              class="text-brand-gold text-xs">必須</span></label>
+          <textarea id="message" name="message" rows="6" required
+            class="w-full bg-brand-dark border border-brand-light/20 px-4 py-3 text-brand-light focus:outline-none focus:border-brand-gold transition-colors"></textarea>
+        </div>
+
+        <div class="text-center pt-4">
+          <button type="submit"
+            class="inline-block bg-brand-gold text-brand-dark font-serif tracking-widest py-3 px-12 hover:bg-brand-light transition-colors duration-300">
+            送信する
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="relative bg-brand-gray pt-20 pb-10 border-t border-brand-light/5">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
+      <div class="mb-10">
+        <a href="index.html" class="inline-block">
+          <img src="img/common/アートボード 1.png" alt="安芸・瀬戸 AKISETO" class="footer-logo-text">
+        </a>
+      </div>
+      <ul
+        class="flex flex-wrap justify-center gap-6 md:gap-10 font-sans text-sm tracking-widest text-brand-muted mb-16">
+        <li><a href="index.html" class="hover:text-brand-gold transition-colors">TOP</a></li>
+        <li><a href="menu.html" class="hover:text-brand-gold transition-colors">MENU</a></li>
+        <li><a href="stores.html" class="hover:text-brand-gold transition-colors">STORES</a></li>
+        <li><a href="news.html" class="hover:text-brand-gold transition-colors">NEWS</a></li>
+        <li><a href="contact.html" class="hover:text-brand-gold transition-colors">CONTACT</a></li>
+      </ul>
+      <p class="font-en text-brand-muted/50 text-xs tracking-widest">&copy; 2026 AKISETO. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <button id="js-pagetop"
+    class="fixed right-6 bottom-6 w-12 h-12 border border-brand-gold/50 bg-brand-dark/80 text-brand-gold flex justify-center items-center rounded-full opacity-0 invisible transition-all duration-300 hover:bg-brand-gold hover:text-brand-dark z-40 backdrop-blur-sm"
+    aria-label="ページ上部へ戻る">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKISETOのトップページ</title>
+
+  <!-- ★ ファビコンの設定 ★ -->
+  <link rel="icon" href="img/common/AKISETO logo favicon.png" type="image/png">
+  <!-- スマホのホーム画面に追加した時のアイコン設定（任意） -->
+  <link rel="apple-touch-icon" href="img/common/AKISETO logo favicon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー（全ページ共通） -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </a>
+      </h1>
+
+      <!-- ハンバーガーボタン -->
+      <button class="hamburger" id="js-hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- ナビゲーションメニュー -->
+      <nav class="nav" id="js-nav">
+        <!-- ドロワーメニュー用のロゴ -->
+        <div class="nav-logo">
+          <img src="img/common/AKISETO logo mark.png" alt="AKISETO">
+        </div>
+
+        <ul>
+          <li><a href="index.html"><img src="img/common/icon_top.png" alt=""><span>トップページ</span></a></li>
+          <li><a href="menu.html"><img src="img/common/icon_menu.png" alt=""><span>メニュー</span></a></li>
+          <li><a href="stores.html"><img src="img/common/icon_map.png" alt=""><span>店舗情報</span></a></li>
+          <li><a href="news.html"><img src="img/common/icon_news.png" alt=""><span>お知らせ</span></a></li>
+          <li><a href="contact.html"><img src="img/common/icon_contact.png" alt=""><span>お問い合わせ</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+ <!-- メニューページのサブヒーロー（上部ビジュアル） -->
+ <section class="sub-hero">
+    <div class="sub-hero-bg">
+      <img src="img/common/AKISETO News.png" alt="お知らせ画像背景">
+    </div>
+
+    <div class="sub-hero-inner">
+      <img src="img/common/News inner.png" alt="お知らせ" class="sub-hero-title-img">
+    </div>
+  </section>
+
+
+  <!-- メインコンテンツエリア -->
+  <main class="news-page-main">
+    <div class="news-container">
+
+      <!-- トップニュース セクション -->
+ <section class="top-news-section">
+        <div class="section-title">
+          <h2>TOP NEWS</h2>
+          <span>トップニュース</span>
+        </div>
+
+  <article class="top-news-card">
+  <a href="newsCarpPV.html">
+    <div class="top-news-img">
+      <img src="img/news/カープ パブリックビューイング.png" alt="カープ戦PVイベント">
+    </div>
+    <div class="top-news-meta">
+      <time datetime="2026-08-30">2026/8/30</time>
+      <span class="category-badge category-event">イベント</span>
+      
+      <!-- タイトル（横並びで電光掲示板表示） -->
+      <h3 class="top-news-title">
+        <span class="ticker-wrap">
+          <span class="ticker-content">広島駅北店にてカープVSジャイアンツ戦のパブリックビューイングを行います</span>
+          <span class="ticker-content" aria-hidden="true">広島駅北店にてカープVSジャイアンツ戦のパブリックビューイングを行います</span>
+        </span>
+      </h3>
+    </div>
+  </a>
+</article>
+      </section>
+
+<!-- 過去のお知らせ セクション -->
+      <section class="others-news-section">
+        <div class="section-title">
+          <h2>OTHERS</h2>
+          <span>過去のお知らせ</span>
+        </div>
+
+        <!-- カテゴリ切り替えタブ -->
+        <ul class="news-tabs" id="js-news-tabs">
+          <li class="tab-item active"><button type="button" class="btn-all" data-filter="all">すべて</button></li>
+          <li class="tab-item"><button type="button" class="btn-event" data-filter="event">イベント</button></li>
+          <li class="tab-item"><button type="button" class="btn-news" data-filter="news">ニュース</button></li>
+        </ul>
+
+        <!-- ニュース一覧（テスト用に件数を増やしています） -->
+        <ul class="news-list" id="js-news-list">
+          <li class="news-item" data-category="event">
+            <a href="newsCarpPV.html">
+              <time datetime="2026-08-30">2026/8/30</time>
+              <span class="category-badge category-event">イベント</span>
+              <p class="news-item-title">広島駅北店 カープ戦のパブリックビューイングを行います</p>
+            </a>
+          </li>
+          <li class="news-item" data-category="event">
+            <a href="#">
+              <time datetime="2026-08-05">2026/8/5</time>
+              <span class="category-badge category-event">イベント</span>
+              <p class="news-item-title">広島駅北店 カープ戦のパブリックビューイングを行います</p>
+            </a>
+          </li>
+          <li class="news-item" data-category="event">
+            <a href="#">
+              <time datetime="2026-06-10">2026/6/10</time>
+              <span class="category-badge category-event">イベント</span>
+              <p class="news-item-title">本通り店 サッカーW杯のパブリックビューイングを行います</p>
+            </a>
+          </li>
+          <li class="news-item" data-category="news">
+            <a href="#">
+              <time datetime="2026-06-01">2026/6/1</time>
+              <span class="category-badge category-news">ニュース</span>
+              <p class="news-item-title">新レギュラーメニューのご案内</p>
+            </a>
+          </li>
+          <li class="news-item" data-category="event">
+            <a href="#">
+              <time datetime="2026-05-15">2026/5/15</time>
+              <span class="category-badge category-event">イベント</span>
+              <p class="news-item-title">本通り店 サンフレッチェ広島戦のパブリックビューイングを行います</p>
+            </a>
+          </li>
+          <!-- 6件目以降（2ページ目の確認用例） -->
+          <li class="news-item" data-category="news">
+            <a href="#">
+              <time datetime="2026-04-20">2026/4/20</time>
+              <span class="category-badge category-news">ニュース</span>
+              <p class="news-item-title">春の特別限定ドリンクのご案内</p>
+            </a>
+          </li>
+          <li class="news-item" data-category="event">
+            <a href="#">
+              <time datetime="2026-03-10">2026/3/10</time>
+              <span class="category-badge category-event">イベント</span>
+              <p class="news-item-title">広島駅北店 オープン記念イベント開催</p>
+            </a>
+          </li>
+        </ul>
+
+        <!-- ★ ページネーション出力エリアを追加 -->
+        <div class="pagination" id="js-pagination"></div>
+
+      </section>
+
+    </div>
+  </main>
+
+ <!-- フッター（index除く全ページ共通） -->
+  <footer class="footer">
+    <div class="footer-bg">
+     <img src="img/common/footer.png" alt="店内イメージ">
+    </div>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="img/common/footer_logo.png" alt="AKISETO">
+      </a>
+    </div>
+  </footer>
+
+  <!-- ページトップへ戻るボタン -->
+  <button type="button" class="page-top-btn" id="js-pagetop" aria-label="ページ上部へ戻る">
+     <img src="img/common/btn_pagetop.png" alt="上へ">
+  </button>
+
+  <!-- 共通JavaScriptの読み込み -->
+  <script src="js/main.js"></script>
+</body>
+</html>
