@@ -38,6 +38,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 24px 6%;
     background: #fff;
     border-bottom: 1px solid #eee;
@@ -49,11 +50,17 @@ header {
     font-weight: 700;
     letter-spacing: 2px;
     color: #222;
-    text-decoration: none;
 }
 
 .profile-link {
+    margin-left: auto;
     color: #222;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.profile-link:hover {
+    opacity: 0.6;
 }
 
 
@@ -178,12 +185,6 @@ h1 {
     overscroll-behavior: contain;
 }
 
-.modal-content img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 
 /* 閉じるボタン：画面右上に固定 */
 
@@ -214,6 +215,12 @@ h1 {
 
 
 /* モーダルのメイン画像 */
+
+.modal-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 .modal-main-visual {
     display: flex;
@@ -270,7 +277,77 @@ h1 {
 
 
 /* ========================================
-   6. Web Design・デザインカンプ
+   6. Profileモーダル
+======================================== */
+
+.profile-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-modal.active {
+    display: flex;
+}
+
+.profile-content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 35px;
+    background: #fff;
+    text-align: center;
+}
+
+.profile-content h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+}
+
+.profile-content p {
+    margin-bottom: 35px;
+    color: #777;
+}
+
+.profile-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.profile-documents {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-documents a {
+    display: block;
+    padding: 16px;
+    border: 1px solid #222;
+    color: #222;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.profile-documents a:hover {
+    background: #222;
+    color: #fff;
+}
+
+
+/* ========================================
+   7. Web Design・デザインカンプ
 ======================================== */
 
 .work-section {
@@ -307,7 +384,7 @@ h1 {
 
 
 /* ========================================
-   7. PC・スマホ切り替え
+   8. PC・スマホ切り替え
 ======================================== */
 
 .version-switch {
@@ -335,7 +412,7 @@ h1 {
 
 
 /* ========================================
-   8. Figma Prototype
+   9. Figma Prototype
 ======================================== */
 
 .prototype {
@@ -359,7 +436,7 @@ h1 {
 
 
 /* ========================================
-   9. デザイン画像拡大モーダル
+   10. デザイン画像拡大モーダル
 ======================================== */
 
 .image-modal {
@@ -410,7 +487,7 @@ h1 {
 
 
 /* ========================================
-   10. ページ上部へ戻るボタン
+   11. ページ上部へ戻るボタン
 ======================================== */
 
 #back-to-top {
@@ -418,27 +495,21 @@ h1 {
     right: 30px;
     bottom: 30px;
     z-index: 2000;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 50px;
     height: 50px;
     border: none;
     border-radius: 50%;
-
     background: #222;
     color: #fff;
     font-size: 24px;
-
     cursor: pointer;
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: translateY(10px);
-
     transition:
         opacity 0.3s,
         visibility 0.3s,
@@ -460,7 +531,7 @@ h1 {
 
 
 /* ========================================
-   11. スマートフォン対応
+   12. スマートフォン対応
 ======================================== */
 
 @media screen and (max-width: 768px) {
@@ -503,7 +574,7 @@ h1 {
 
 
 /* ========================================
-   12. 小型スマートフォン対応
+   13. 小型スマートフォン対応
 ======================================== */
 
 @media screen and (max-width: 600px) {
@@ -564,6 +635,10 @@ h1 {
         font-size: 1.7rem;
     }
 
+    .profile-content {
+        padding: 45px 20px;
+    }
+
     #back-to-top {
         right: 18px;
         bottom: 18px;
@@ -575,7 +650,7 @@ h1 {
 
 
 /* ========================================
-   13. 動きを控える設定
+   14. 動きを控える設定
 ======================================== */
 
 @media (prefers-reduced-motion: reduce) {

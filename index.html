@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -26,11 +25,33 @@
     <!-- ヘッダー -->
     <header>
         <div class="site-title">PORTFOLIO</div>
-        <div class="profile-link">Profile</div>
+
+        <div class="profile-link" onclick="openProfile()">
+            Profile
+        </div>
     </header>
 
-    <main>
+    <!-- Profileモーダル -->
+    <div id="profile-modal" class="profile-modal">
+        <div class="profile-content">
+            <button class="profile-close" onclick="closeProfile()">×</button>
 
+            <h2>Profile</h2>
+            <p>応募書類</p>
+
+            <div class="profile-documents">
+                <a href="documents/resume.pdf" target="_blank">
+                    履歴書を見る
+                </a>
+
+                <a href="documents/work-history.pdf" target="_blank">
+                    職務経歴書を見る
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main>
         <!-- WEB・LP -->
         <section class="portfolio-section">
             <h2 class="section-title">WEB・LP</h2>
@@ -198,4 +219,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>

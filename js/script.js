@@ -516,3 +516,31 @@ renderGallery("login-gallery", "login", loginDesigns);
     setupModalEvents();
 
 });
+
+
+/* ========================================
+   Profile Modal
+======================================== */
+
+function openProfile() {
+    const modal = document.getElementById("profile-modal");
+    modal.classList.add("active");
+}
+
+function closeProfile() {
+    const modal = document.getElementById("profile-modal");
+    modal.classList.remove("active");
+}
+
+// モーダルの背景をクリックしたときも閉じる
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("profile-modal");
+
+    if (modal) {
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                closeProfile();
+            }
+        });
+    }
+});
