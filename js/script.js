@@ -84,7 +84,7 @@ const works = {
         tools: "HTML, CSS, JavaScript",
         date: "2026年7月",
         period: "約1日",
-        link: "/portfolio/musashi_touki_website/index.html",
+        link: "musashi_touki_website/index.html",
         memo: "ヒューマンアカデミーの授業課題として制作。講師のお手本をもとに、レクチャーを受けながら作成。",
         concept: "陶器を扱う店舗のWebサイト制作を通して、商品の魅力や店舗の特徴を伝える方法を学ぶことを目的に制作。",
         design: "陶器の雰囲気や商品の魅力が伝わるよう、写真の見せ方や文字の配置、全体のレイアウトを学習。",
