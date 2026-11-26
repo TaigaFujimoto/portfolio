@@ -310,7 +310,7 @@ function renderGallery(galleryId, folder, files) {
         img.src = `img/design%26prototype/${folder}/${file}`;
         img.alt = file;
         img.className = "design-image";
-        img.loading = "lazy";
+        img.loading = "eager";
 
         img.addEventListener("click", () => {
             openImage(img.src, img.alt);
@@ -503,11 +503,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // Corporate Site
-    renderGallery("corporate-gallery", "Corporate", corporateDesigns);
+   // Corporate Site
+renderGallery("corporate-gallery", "corporate", corporateDesigns);
 
-    // Login Image
-    renderGallery("login-gallery", "Login", loginDesigns);
+// Login Image
+renderGallery("login-gallery", "login", loginDesigns);
 
     // ページ上部へ戻るボタン
     setupBackToTop();
