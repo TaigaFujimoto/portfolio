@@ -77,7 +77,7 @@ const works = {
         tools: "HTML, CSS, JavaScript",
         date: "",
         period: "",
-        link: "musashi_touki_website/index.html",
+        link: "/portfolio/musashi_touki_website/index.html",
         memo: "",
         concept: "",
         design: "",
